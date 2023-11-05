@@ -1,0 +1,133 @@
+@import "../../variable.scss";
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 0px 45px 0px;
+  border-bottom: 1px solid $light_minir_color;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__ul {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    margin: 0px 38px 0px 0px;
+    &:first-child {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -38px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 10px;
+        height: 2px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: $main_color;
+      }
+    }
+  }
+  &__link {
+    color: #030211;
+    text-align: center;
+    font-family: $minire_font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 0px;
+    transition: $sec_transition;
+    &:hover{
+      transition: $sec_transition;
+      color: $minir_color;
+    }
+  }
+
+  // .header__button-menu
+
+  &__button-menu {
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    width: 57px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid $light_minir_color;
+    background: $light_color;
+  }
+
+  // .header__button
+
+  &__button {
+    span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: $main_color;
+      transition: $sec_transition;
+      &:first-child {
+        width: 12px;
+        margin: 0px 0px 5px 12px;
+      }
+      &:last-child {
+        width: 12px;
+        margin: 5px 0px 0px 0px;
+      }
+    }
+  }
+}
+.button--activ {
+  span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: $main_color;
+    transform: rotate(45deg);
+    transition: $sec_transition;
+    &:first-child {
+      transform: rotate(-45deg);
+      width: 12.5px;
+      margin: 0px 0px 3px 11px;
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+      width: 13.5px;
+      margin: 3px 0px 0px 0px;
+    }
+  }
+}
+.logo {
+  display: inline-block;
+  max-width: 130px;
+  max-height: 40px;
+  background: $main_color;
+  a {
+    padding: 0px 5px;
+    color: #fff;
+    font-family: $main_font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: underline;
+  }
+}
+
+@media(max-width: 890px){
+  .header{
+    padding: 30px 0px 20px 0px;
+    &__ul{
+      display: none;
+    }
+  }
+}

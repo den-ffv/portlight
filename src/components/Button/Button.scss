@@ -1,0 +1,26 @@
+@import "../../variable.scss";
+
+.button {
+  display: flex;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: $main_color;
+  color: $light_color;
+  text-align: center;
+  font-family: $minire_font;
+  font-size: 14px;
+  font-weight: 700;
+  transition: $sec_transition;
+  img{
+    margin: 0px 0px 0px 9px;
+  }
+  &:hover{
+    transition: $sec_transition;
+    background: #555555;
+  }
+
+}
