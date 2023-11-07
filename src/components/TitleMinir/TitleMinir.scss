@@ -1,0 +1,33 @@
+@import "../../variable.scss";
+
+.minir-title {
+  color: $main_color;
+  font-family: $main_font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  span {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px 0px 0px 10px;
+    padding: 0px 5px;
+  }
+  &__light {
+    color: $main_color;
+    span {
+      color: #fff;
+      background: $main_color;
+    
+    }
+  }
+  &__dark {
+    color: $light_color;
+    span {
+      color: $main_color;
+      background: $light_color;
+    }
+  }
+}

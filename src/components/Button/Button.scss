@@ -6,21 +6,35 @@
   justify-content: center;
   align-items: center;
   border-radius: 40px;
-  border: 2px solid transparent;
   cursor: pointer;
-  background: $main_color;
-  color: $light_color;
+  border: 2px solid transparent;
+
   text-align: center;
   font-family: $minire_font;
   font-size: 14px;
   font-weight: 700;
   transition: $sec_transition;
-  img{
+  img {
     margin: 0px 0px 0px 9px;
   }
-  &:hover{
-    transition: $sec_transition;
-    background: #555555;
+  &__dark {
+    background: $main_color;
+    color: $light_color;
+    &:hover {
+      transition: $sec_transition;
+      background: #050505;
+    }
   }
-
+  &__light {
+    background: $light_color;
+    color: $main_color;
+    border: 2px solid $main_color;
+    img {
+      filter: invert(100%);
+    }
+    &:hover {
+      transition: $sec_transition;
+      background: #e0e0e0;
+    }
+  }
 }

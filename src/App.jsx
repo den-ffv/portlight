@@ -21,6 +21,7 @@ function App() {
 
   return (
     <>
+
       <div className='wrapper'>
         <Header
           menuItems={menuItems}

@@ -1,0 +1,36 @@
+.carousel {
+  position: relative;
+  display: flex;
+  overflow:visible;
+  margin: 40px 0px 75px 0px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1px;
+  &::before{
+    content: "";
+    background: url("/caruse-elem.svg") center;
+    position: absolute;
+    top: -34px;
+    width: 100%;
+    height: 140px;
+  }
+  &::after{
+    content: "";
+    background: url("/caruse-elem.svg") center;
+    position: absolute;
+    bottom: -34px;
+    transform: rotate(180deg);
+    width: 100%;
+    height: 140px;
+  }
+  &__element {
+    width: 285px;
+    height: 650px;
+    margin: 0px 10px 0px 10px;
+    img{
+      object-fit: cover;
+      width: 285px;
+      height: 100%;
+    }
+  }
+}

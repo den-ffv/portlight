@@ -1,6 +1,6 @@
 import React from "react";
 
-function Title({ titelText, paragraph }) {
+function Title({ titelText, paragraph}) {
   return (
     <div>
       <h1>{titelText}</h1>

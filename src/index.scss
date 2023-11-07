@@ -125,9 +125,13 @@ input {
   max-width: 1240px;
   margin: 0px auto;
   padding: 0px 20px;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
-.title-container{
-    margin: 95px 0px 0px 0px;
+
+// titel style
+.title-container {
+  margin: 95px 0px 0px 0px;
 }
 .main-title {
   color: $main_color;
@@ -137,6 +141,7 @@ input {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 0px 0px 25px 0px;
 }
 .main-paragrafe {
   color: $minir_color;
@@ -146,7 +151,46 @@ input {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  span{
+  span {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    margin: 55px 0px 0px 0px;
+  }
+  .main-title {
+    font-size: 60px;
+    margin: 0px 0px 15px 0px;
+    img {
+      height: 35px;
+    }
+  }
+  .main-paragrafe {
+    font-size: 17px;
+  }
+}
+// ---------
+.section {
+  &__we-do {
+    display: flex;
+    justify-content: space-between;
+    margin: 140px 0px 140px 0px;
+    .we-do-content {
+      max-width: 561px;
+      p {
+        color: $main_color;
+        font-family: $minire_font;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0px 0px 30px 0px;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }

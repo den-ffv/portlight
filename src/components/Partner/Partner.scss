@@ -1,0 +1,21 @@
+@import "../../variable.scss";
+
+.partner {
+  margin: 0px 0px 80px 0px;
+  &__title {
+    color: $main_color;
+    text-align: center;
+    font-family: $main_font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 11.3px;
+    margin: 0px 0px 54px 0px;
+  }
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
