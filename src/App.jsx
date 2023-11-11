@@ -8,6 +8,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Work from "./pages/Work";
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +22,7 @@ function App() {
 
   return (
     <>
-
-      <div className='wrapper'>
+      <div className="wrapper">
         <Header
           menuItems={menuItems}
           menuOpen={menuOpen}
@@ -33,13 +33,14 @@ function App() {
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
         />
-        <main className='mani'>
+        <main className="mani">
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/news' element={<News />} />
-            <Route path='/work' element={<Work />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer menuItems={menuItems} />

@@ -1,0 +1,75 @@
+@import "../../variable.scss";
+
+.running-line {
+  overflow: hidden;
+  height: 105px;
+  position: relative;
+  margin: 50px 0px 50px 0px;
+  &::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 310px;
+      z-index: 2;
+      right: 0;
+      box-shadow: -300px 1px 95px -61px rgba(0, 0, 0, 0.959) inset;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 310px;
+        z-index: 2;
+        left: 0;
+        box-shadow: 300px 1px 95px -61px rgba(0, 0, 0, 0.959) inset;
+  
+      }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    width: 260%;
+    height: 105px;
+    transform: translate(100%, 0);
+    
+    p {
+      color: $light_color;
+      font-family: $main_font;
+      font-size: 115px;
+      font-weight: 700;
+    }
+  }
+
+  $duration: 60s;
+
+  .ticker-wrapper__first-half {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: ticker $duration infinite linear forwards;
+  }
+  .ticker-wrapper__second-half {
+    animation: $duration ticker $duration/2 infinite linear forwards;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

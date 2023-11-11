@@ -1,0 +1,54 @@
+@import "../../variable.scss";
+
+.project-card {
+    position: relative;
+    margin: 30px 10px;
+    cursor: pointer;
+    &::before{
+        content: "";
+        position: absolute;
+        opacity: 0;
+        right: -60px;
+        top: 20px;
+        width: 114px;
+        height: 114px;
+        background: url("/icon/view-icon.svg");
+        transform: scale(0);
+        transition: $sec_transition;
+
+    }
+    &:hover{
+        &::before{
+            content: "";
+            opacity: 1;
+            transition: $sec_transition;
+            transform: scale(0.8);
+        }
+    }
+  &__img-conteiner {
+    max-width: 406px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    color: $light_color;
+    font-family: $main_font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 24px 0px 0px 0px;
+  }
+
+  &__teg {
+    color: $light_color;
+    font-family: $minire_font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
